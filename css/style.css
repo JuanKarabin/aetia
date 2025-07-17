@@ -397,7 +397,6 @@ textarea::placeholder {
 }
 .about-left {
 	margin-right: 90px;
-	max-width: 505px;
 }
 .about-right {
 	width: 550px;
@@ -730,11 +729,11 @@ textarea::placeholder {
 }
 
 .form-right {
-	width: 55%; 
+	width: 54%; 
 }
 
 .form-map {
-	width: 40%; 
+	margin-top: 10%;
 }
 
 .map-container {
@@ -802,7 +801,7 @@ textarea::placeholder {
 .footer-right {
 	display: flex;
 	justify-content: space-between;
-	width: 78%;
+	width: 90%;
 	padding: 60px 0 60px 60px;
 }
 .footer-desc {
@@ -950,7 +949,7 @@ textarea::placeholder {
 	.def-btn {
 		padding: 12px 40px;
 		font-size: 20px;
-		margin: 10% auto 0 auto;
+		margin: 5% auto 0 auto;
 	}
 	/* Banner 992 END */
 
@@ -961,6 +960,7 @@ textarea::placeholder {
 	}
 	.about-left {
 		margin: 0 auto 30px auto;
+		max-width: 100% !important;
 	}
 	.about .def-desc {
 		margin-bottom: 20px;
@@ -969,7 +969,10 @@ textarea::placeholder {
 		margin: 0 auto;
 		width: 100%;
 		max-width: 505px;
-		height: 300px;
+	}
+	.about-right img{
+		width: 100% !important;
+		height: auto;
 	}
 	/* About 992 END */
 
@@ -982,11 +985,12 @@ textarea::placeholder {
 		column-gap: 20px;
 	}
 	.services-title {
-		font-size: 20px;
+		font-size: initial;
 		line-height: 1.5;
 	}
 	.services-desc{
 		font-size: 15px;
+		min-height: auto !important;
 	}
 	.services-btn {
 		padding: 10px 25px;
@@ -1182,9 +1186,9 @@ textarea::placeholder {
 	.services-body {
 		padding: 10px 15px 20px 15px;
 	}
-	.services-btn {
+	/*.services-btn {
 		font-size: 12px;
-	}
+	}*/
 	.services-row {
 		flex-wrap: wrap;
 		row-gap: 20px;
@@ -1268,7 +1272,7 @@ textarea::placeholder {
 	.about .def-btn {
 		display: block;
 		text-align: center;
-		max-width: 180px;
+		max-width: 80%;
 		margin: 10% auto 0 auto;
 		padding: 12px 20px;
 	}
@@ -1314,6 +1318,13 @@ textarea::placeholder {
 	}
 	.modal-form .form-button {
 		font-size: 14px;
+	}
+	.modal-image img {
+		display: none;
+	}
+	.modal-text p {
+		font-size: 1rem;
+		text-align: inherit;
 	}
 }
 /* Responsive END */

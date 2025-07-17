@@ -777,7 +777,14 @@ textarea::placeholder {
 	}
 }
 
+.icono-linkedin {
+  fill: #D5B602;
+  transition: fill 0.3s ease;
+}
 
+.icono-linkedin:hover {
+  fill: #A38B01;
+}
 
 /* Footer START */
 .site-footer {

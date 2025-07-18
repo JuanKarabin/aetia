@@ -778,14 +778,17 @@ textarea::placeholder {
 	}
 }
 
-.icono-linkedin {
+.icono-linkedin,
+.icono-whatsapp {
   fill: #D5B602;
   transition: fill 0.3s ease;
 }
 
-.icono-linkedin:hover {
+.icono-linkedin:hover,
+.icono-whatsapp:hover {
   fill: #A38B01;
 }
+
 
 /* Footer START */
 .site-footer {
@@ -978,7 +981,7 @@ textarea::placeholder {
 		max-width: 505px;
 	}
 	.about-right img{
-		width: 100% !important;
+		width: 90% !important;
 		height: auto;
 	}
 	/* About 992 END */

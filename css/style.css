@@ -1226,6 +1226,7 @@ textarea::placeholder {
 	}
 	.footer-info-item {
 		justify-content: center;
+		display: block;
 	}
 	.footer-social {
 		justify-content: center;

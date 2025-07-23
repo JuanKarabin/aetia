@@ -139,7 +139,7 @@ textarea::placeholder {
 
 .subtitle{
 	color: #D5B602;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	font-weight: 600;
 	line-height: 1.25;
 	letter-spacing: 1px;
@@ -217,8 +217,9 @@ textarea::placeholder {
 .header-nav ul {
 	display: flex;
 	list-style-type: none;
-	padding: 0;
+	padding: inherit;
 	column-gap: 50px;
+	font-size: 16px;
 }
 .header-nav ul li a {
 	transition: color 0.35s ease;
@@ -233,10 +234,10 @@ textarea::placeholder {
 	transition: 0.35s ease;
 }
 .header-bottom.is-fixed .header-logo {
-	padding: 0 50px 5px 40px;
+	padding: 0 50px 0px 40px;
 }
 .header-bottom.is-fixed .header-nav {
-    padding: 0 60px;
+    padding: 3px 60px;
 }
 .header-bottom.is-fixed .header-logo img {
 	max-width: 140px;
@@ -744,6 +745,49 @@ textarea::placeholder {
 	border-radius: 5px;
 }
 
+
+/*--------------------------------------------------------------
+# btn-wsp button
+--------------------------------------------------------------*/
+
+.btn-wsp {
+	position: fixed;
+	visibility: visible;
+	opacity: 1;
+	right: 20px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 996;
+	background: #26D366;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.54);
+}
+
+.btn-wsp i {
+	font-size: 28px;
+	color: #fff;
+}
+
+.btn-wsp:hover {
+	background: #fff;
+	color: #26D366;
+}
+
+.btn-wsp:hover i {
+	color: #26D366;
+}
+
+.btn-wsp.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+
 /* Responsividad para dispositivos móviles */
 @media (max-width: 768px) {
 	.form-row {
@@ -779,13 +823,15 @@ textarea::placeholder {
 }
 
 .icono-linkedin,
-.icono-whatsapp {
+.icono-whatsapp,
+.icono-email {
   fill: #D5B602;
   transition: fill 0.3s ease;
 }
 
 .icono-linkedin:hover,
-.icono-whatsapp:hover {
+.icono-whatsapp:hover,
+.icono-email:hover {
   fill: #A38B01;
 }
 
@@ -801,9 +847,9 @@ textarea::placeholder {
 }
 
 .footer-left {
-	max-width: 80px;
-	padding: 60px 60px 60px 0;
+	padding: 45px 15px 0px 0px;
 	border-right: 1px solid rgba(239, 239, 239, 0.24);
+	font-size: 45px;
 }
 .footer-logo {
 	margin-bottom: 25px;
@@ -812,7 +858,7 @@ textarea::placeholder {
 .footer-right {
 	display: flex;
 	justify-content: space-between;
-	padding: 60px 0 60px 60px;
+	padding: 60px 0 60px 30px;
 }
 .footer-desc {
 	color: #D2D2D2;

@@ -687,6 +687,26 @@ textarea::placeholder {
   top: auto;
 }
 
+.mision-vision {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* espacio entre icono y texto */
+}
+
+.mision-vision .icon-title {
+	width: 28px;  /* ajustá según tamaño que quieras */
+	height: auto;
+}
+
+.nadia-daniela {
+	background: #797d8162;
+}
+
+.nadia-daniela:hover {
+	background: #797d8136;
+}
+
+
 /*Nosotros End*/
 
 

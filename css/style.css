@@ -640,19 +640,8 @@ textarea::placeholder {
 }
 /* Form END */
 
-.form-row {
-	display: flex; 
-	align-items: flex-start;
-	gap: 20px;
-	flex-wrap: wrap; 
-}
-
 .form-right {
 	width: 54%; 
-}
-
-.form-map {
-	margin-top: 10%;
 }
 
 .map-container {
@@ -661,6 +650,44 @@ textarea::placeholder {
 	box-shadow: 0px -1px 8px 4px rgba(88, 83, 83, 0.12);
 	border-radius: 5px;
 }
+
+/*Nosotros Start*/
+.mision-vision {
+	color: #34434f;
+}
+
+.nosotros {
+	padding: 30px 0;
+	background-color: #FFF;
+}
+
+.nosotros blockquote {
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #34434f;
+  padding: 20px 30px;
+}
+
+.nosotros blockquote::before,
+.nosotros blockquote::after {
+  content: "“";
+  font-size: 3rem;
+  color: #34434f;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.nosotros blockquote::after {
+  content: "”";
+  right: 10px;
+  left: auto;
+  bottom: -10px;
+  top: auto;
+}
+
+/*Nosotros End*/
 
 
 /*--------------------------------------------------------------

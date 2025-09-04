@@ -93,11 +93,11 @@ textarea::placeholder {
 }
 .def-desc strong {
 	letter-spacing: 0.5px;
-	color: #D5B602;
+	color: #34434f;
 }
 
 .def-btn {
-	background-color: #D5B602;
+	background-color: #34434f;
 	padding: 15px 45px;
 	display: inline-block;
 	transition: background-color 0.35s ease;
@@ -105,7 +105,7 @@ textarea::placeholder {
 	color: #fff;
 }
 .def-btn:hover {
-	background-color: #A38B01;
+	background-color: #34434fcc;
 }
 
 .get-in-touch{
@@ -115,9 +115,9 @@ textarea::placeholder {
 }
 
 .get-in-touch:hover{
-	border: 2px solid #1C0E05;
+	border: 2px solid #797d81;
 	color: #fff;
-	background-color: #1C0E05;
+	background-color: #797d81;
 	padding: 10px 30px;
 	margin-top: 1rem;
 }
@@ -133,12 +133,12 @@ textarea::placeholder {
 
 .contact-btn:hover{
 	color: #fff !important;
-	border-color: #D5B602;
-	background-color: #D5B602;
+	border-color: #34434f;
+	background-color: #34434f;
 }
 
 .subtitle{
-	color: #D5B602;
+	color: #34434f;
 	font-size: 1.4rem;
 	font-weight: 600;
 	line-height: 1.25;
@@ -148,7 +148,7 @@ textarea::placeholder {
 
 /* Header START */
 .header-top {
-	background-color: #D5B602;
+	background-color: #34434f;
 	color: #fff;
 	padding: 18px 0 55px 0;
 	font-size: 14px;
@@ -203,6 +203,11 @@ textarea::placeholder {
 	display: flex;
 	align-items: center;
 	clip-path: polygon(0px 0px, 100% 0%, 82.68% 101.20%, 0px 100%);
+	color: #34434f;
+	font-size: 2.7rem;
+	font-weight: 600;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
 }
 .header-logo a {
 	display: flex;
@@ -225,7 +230,7 @@ textarea::placeholder {
 	transition: color 0.35s ease;
 }
 .header-nav ul li a:hover {
-	color: #D5B602;
+	color: #34434f;
 }
 
 .header-bottom.is-fixed {
@@ -295,7 +300,7 @@ textarea::placeholder {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(35, 31, 31, 0.80);
+	background-color: rgba(35, 31, 31, 0.40);
 	z-index: -1;
 }
 .banner-content {
@@ -414,7 +419,7 @@ textarea::placeholder {
 
 /* Services START */
 .services {
-	background: #E9E3DF;
+	background: #fff3e8;
 	padding: 100px 0;
 }
 .services-row {
@@ -547,99 +552,11 @@ textarea::placeholder {
 }
 
 .highlight {
-  color: #a88c00;
+  color: #34434f;
   font-weight: 600;
 }
 
-
-
 /* Services END */
-
-
-
-/* Gallery START */
-.s-gallery {
-	padding: 60px 0;
-	background-color: #FFF;
-}
-.gallery-wrap {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 40px;
-}
-.gallery-wrap a {
-	position: relative;
-	overflow: hidden;
-}
-.gallery-item:nth-child(n+7) {
-	display: none;
-}
-.gallery-wrap a.gallery-visible {
-	display: block;
-}
-.gallery-wrap a img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-.gallery-wrap a:hover::before, 
-.gallery-wrap a:hover::after, 
-.gallery-wrap a:hover .gallery-border {
-	opacity: 1;
-}
-
-.gallery-wrap a::before {
-	content: 'Zoom';
-	background-color: rgba(68, 62, 62, 0.72);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	font-size: 22px;
-	padding-top: 50px;
-	margin-top: -20px;
-	opacity: 0;
-	transition: 0.5s ease;
-}
-.gallery-wrap a::after {
-	content: '';
-	background-image: url('../images/magnify.svg');
-	background-size: 100% 100%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	width: 35px;
-	height: 35px;
-	z-index: 1;
-	position: absolute;
-	margin-top: -20px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: 0.5s ease;
-}
-.gallery-border {
-	border: 1px solid #fff;
-	width: calc(100% - 35px);
-	height: calc(100% - 35px);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: 0.5s ease;
-}
-
-.gallery-btn {
-	text-align: center;
-	margin-top: 44px;
-}
-/* Gallery END */
-
 
 
 @keyframes marquee {
@@ -825,20 +742,20 @@ textarea::placeholder {
 .icono-linkedin,
 .icono-whatsapp,
 .icono-email {
-  fill: #D5B602;
+  fill: #34434f;
   transition: fill 0.3s ease;
 }
 
 .icono-linkedin:hover,
 .icono-whatsapp:hover,
 .icono-email:hover {
-  fill: #A38B01;
+  fill: #34434fcc;
 }
 
 
 /* Footer START */
 .site-footer {
-	background-color: #1C0E05;
+	background-color: #797d81;
 	color: #fff;
 	font-size: 18px;
 }
@@ -1053,14 +970,6 @@ textarea::placeholder {
 	}
 	/* Services 992 END */
 
-	/* Gallery 992 START */
-	.s-gallery {
-		padding: 60px 0;
-	}
-	.gallery-wrap {
-		grid-gap: 20px;
-	}
-	/* Gallery 992 END */
 
 	/* Form 992 START */
 	.s-form {
@@ -1185,7 +1094,7 @@ textarea::placeholder {
 	}
 
 	.header-mobile-wrap {
-		background-color: #D5B602;
+		background-color: #34434f;
 		color: #fff;
 		padding: 30px 20px;
 		text-align: center;

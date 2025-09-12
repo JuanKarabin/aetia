@@ -245,7 +245,7 @@ textarea::placeholder {
     padding: 3px 60px;
 }
 .header-bottom.is-fixed .header-logo img {
-	max-width: 140px;
+	padding: 9.5px;
 }
 
 .go-up {
@@ -392,7 +392,7 @@ textarea::placeholder {
 /* About START */
 .about {
 	padding: 90px 0;
-	background-color: #FFF;
+	background-color: #FFF3E8;
 }
 .about-row {
 	display: flex;
@@ -419,7 +419,7 @@ textarea::placeholder {
 
 /* Services START */
 .services {
-	background: #fff3e8;
+	background: #fff;
 	padding: 100px 0;
 }
 .services-row {
@@ -445,6 +445,7 @@ textarea::placeholder {
 }
 .services-body {
 	padding: 15px 20px 30px 20px;
+	background: #FFF3E8;
 }
 .services-title {
 	font-size: 21px;
@@ -578,7 +579,16 @@ textarea::placeholder {
 } */
 /* Partners END */
 
-
+/* Projects START */
+.projects {
+	background: #FFF3E8;
+	padding: 100px 0;
+}
+.projects-body {
+	padding: 15px 20px 30px 20px;
+	background: #FFF;
+}
+/* Projects END */
 
 /* Form START */
 .s-form {

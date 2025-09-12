@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     	$.magnificPopup.close();
 	});
 
+	/*START ALBOR*/
+
 	// --- GALERÍA ---
 	const gallery = document.getElementById('alborGallery');
 	const showMoreBtn = document.getElementById('showMoreAlbor');
@@ -225,5 +227,122 @@ document.addEventListener('DOMContentLoaded', () => {
 	    cards.forEach(card => card.style.display = 'flex'); // mostrar todo
 	    showMoreBtn.style.display = 'none';
 	});
+
+
+	/*END ALBOR*/
+
+	/*START AURA*/
+
+		// --- GALERÍA AURA ---
+	const auraGallery = document.getElementById('auraGallery');
+	const showMoreAura = document.getElementById('showMoreAura');
+	const totalAuraImages = 13;
+	const auraImagesToShowInitially = 4;
+	const auraCards = [];
+	let currentAuraIndex = -1;
+
+	const imgModalAura = document.getElementById('imgModalAura');
+	const modalImgAura = document.getElementById('imgModalSrcAura');
+	const closeImgBtnAura = document.getElementById('closeImgModalAura');
+
+	// Crear cards Aura
+	for (let i = 1; i <= totalAuraImages; i++) {
+	    const card = document.createElement('div');
+	    card.className = 'modal-card';
+	    card.style.display = i <= auraImagesToShowInitially ? 'flex' : 'none';
+
+	    const img = document.createElement('img');
+	    img.src = `proyectos/multimedia/aura/${i}.jpg`;
+	    img.alt = `Aura ${i}`;
+	    img.style.width = '100%';
+	    img.style.height = '100%';
+	    img.style.objectFit = 'cover';
+
+	    const overlay = document.createElement('div');
+	    overlay.className = 'modal-overlay';
+
+	    const zoomIcon = document.createElement('span');
+	    zoomIcon.className = 'modal-zoom-icon';
+	    zoomIcon.innerHTML = '<img src="images/magnify.svg" alt="Zoom">';
+
+	    card.appendChild(img);
+	    card.appendChild(overlay);
+	    card.appendChild(zoomIcon);
+
+	    auraGallery.appendChild(card);
+	    auraCards.push(card);
+
+	    img.addEventListener('click', function() {
+	        currentAuraIndex = i - 1;
+	        openAuraModal(currentAuraIndex);
+	    });
+	}
+
+	// Abrir modal
+	function openAuraModal(index) {
+	    const card = auraCards[index];
+	    const img = card.querySelector('img');
+	    if (img) {
+	        modalImgAura.src = img.src;
+	        imgModalAura.style.display = 'flex';
+	    }
+	}
+
+	// Navegación Aura
+	function showNextAura() {
+	    do {
+	        currentAuraIndex = (currentAuraIndex + 1) % auraCards.length;
+	    } while (!auraCards[currentAuraIndex].querySelector('img'));
+	    openAuraModal(currentAuraIndex);
+	}
+
+	function showPrevAura() {
+	    do {
+	        currentAuraIndex = (currentAuraIndex - 1 + auraCards.length) % auraCards.length;
+	    } while (!auraCards[currentAuraIndex].querySelector('img'));
+	    openAuraModal(currentAuraIndex);
+	}
+
+	document.getElementById('nextImgAura').addEventListener('click', showNextAura);
+	document.getElementById('prevImgAura').addEventListener('click', showPrevAura);
+
+	// Teclado Aura
+	document.addEventListener('keydown', function(e) {
+	    if (imgModalAura.style.display === 'flex') {
+	        if (e.key === 'ArrowRight') showNextAura();
+	        if (e.key === 'ArrowLeft') showPrevAura();
+	        if (e.key === 'Escape') {
+	            e.stopPropagation();
+	            e.preventDefault();
+	            imgModalAura.style.display = 'none';
+	            modalImgAura.src = '';
+	        }
+	    }
+	});
+
+	// Cerrar con X
+	closeImgBtnAura.addEventListener('click', function(e) {
+	    e.stopPropagation();
+	    imgModalAura.style.display = 'none';
+	    modalImgAura.src = '';
+	});
+
+	// Cerrar con click en overlay
+	imgModalAura.addEventListener('click', function(e) {
+	    if (e.target === imgModalAura) {
+	        imgModalAura.style.display = 'none';
+	        modalImgAura.src = '';
+	    }
+	});
+
+	// Mostrar Más
+	showMoreAura.addEventListener('click', function() {
+	    auraCards.forEach(card => card.style.display = 'flex');
+	    showMoreAura.style.display = 'none';
+	});
+
+
+
+	/*END AURA*/
 
 });

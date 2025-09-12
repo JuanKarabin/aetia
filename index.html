@@ -42,9 +42,9 @@
 						Excelente opción para quienes buscan <span class="highlight">comodidad</span>, <span class="highlight">elegancia</span> y <span class="highlight">calidad</span>.
 					</p>
 
-					<div style="margin-top: 24px; text-align: center;">
-						<a href="proyectos/brochures/Brochure_Albor_2025.pdf" download class="def-btn" style="width: 24%; text-align: center; padding: 10px 45px; border: none;">Brochure</a>
-						<a href="proyectos/brochures/Analisis_Economico_Albor_Asuncion.pdf" download class="def-btn" style="width: 24%; text-align: center; padding: 10px 45px; border: none;">Análisis Económico</a>
+					<div style="margin: 2rem 0; text-align: center;">
+						<a href="proyectos/brochures/Brochure_Albor_2025.pdf" download class="def-btn" style="margin-right: 1rem;  padding: 10px 45px; ">Brochure</a>
+						<a href="proyectos/brochures/Analisis_Economico_Albor_Asuncion.pdf" download class="def-btn" style="padding: 10px 45px;">Análisis Económico</a>
 					</div>
 
 					<div class="modal-form-title">
@@ -57,7 +57,7 @@
 						<!-- Las imágenes y video se generarán dinámicamente aquí -->
 					</div>
 					<div style="margin-top: 24px; text-align: center;">
-						<button id="showMoreAlbor" class="def-btn" style="width: 20%; text-align: center; padding: 10px 45px; border: none;">Mostrar Más</button>
+						<button id="showMoreAlbor" class="def-btn" style="margin-top: 1rem; border: none;">Mostrar Más</button>
 					</div>
 
 
@@ -81,32 +81,56 @@
 	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form-2">
 		<div class="modal-form-head">
 			<div class="modal-form-close">
-			<img src="images/close.svg" alt="Close">
+				<img src="images/close.svg" alt="Close">
 			</div>
 		</div>
 
 		<div class="modal-form-body">
 			<div class="modal-flex">
-				<div class="modal-image">
-				<img src="images/invMexico.jpeg" alt="Inversión inmobiliaria">
-				</div>
 				<div class="modal-text">
-				<div class="modal-form-title">
-					Desarrollo de un <span class="highlight">análisis de mercado</span> para inversiones en México
-				</div>
+					<div class="modal-form-title">
+						Aura, la forma mas pura de habitar
+					</div>
 					<p>
-						Realizamos un <span class="highlight">análisis de mercado exhaustivo</span> para un inversor interesado en el <strong>sector inmobiliario en México</strong>. 
-						Nuestro equipo evaluó las <span class="highlight">tendencias del mercado</span>, identificando <strong>áreas con alto potencial de crecimiento</strong> y 
-						<span class="highlight">propiedades con atractivas oportunidades de inversión</span>. 
-						A través de un <strong>enfoque basado en datos</strong>, proporcionamos un <span class="highlight">informe detallado</span> que incluyó 
-						<strong>proyecciones de rentabilidad</strong> y <span class="highlight">recomendaciones estratégicas</span>. 
-						Este análisis resultó <span class="highlight">crucial para tomar decisiones informadas</span> y alineadas a los <strong>objetivos de inversión</strong> del cliente, 
-						permitiéndole acceder a <span class="highlight">oportunidades que antes no había considerado</span>.
+						El equilibrio se construye, se elige en cada linea, en cada textura, en cada proporción. 
+						Aura nace desde esa idea: diseñar un edificio que se sienta como respirar bien. 
+						Calidez funcional y diseño escandinavo, con el propósito de reconectar con lo natural. 
+						Emplazado en el barrio de Mariscal Estigarribia, a metros del Shopping Mariscal, Aura contará con 11 pisos de residencias, rooftop con amenities, spa, wellness center y un tea house. 
+						Diseñado para quienes buscan un oasis en la ciudad, a minutos de todo lo que importa, en el centro de lo que pasa, un lugar pensado con otra frecuencia.
 					</p>
+
+					<div style="margin: 2rem 0; text-align: center;">
+						<a href="https://drive.google.com/file/d/1mokumws732kAhVXO9nar4FCDrCqPNQOT/view" target="_blank" class="def-btn" style="margin-right: 1rem; padding: 10px 45px;">Brochure</a>
+						<a href="https://avanza.com.py/aurajapandi/360" target="_blank" class="def-btn" style="padding: 10px 45px;">Visor 360º</a>
+					</div>
+
+					<div class="modal-form-title">
+						<span class="highlight">Imágenes</span> del Proyecto
+					</div>
+
+					<!-- Galería Aura -->
+					<div class="modal-gallery" id="auraGallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;">
+						<!-- Las imágenes se generan dinámicamente -->
+					</div>
+					<div style="margin-top: 24px; text-align: center;">
+						<button id="showMoreAura" class="def-btn" style="margin-top: 1rem; border: none;">Mostrar Más</button>
+					</div>
+
+					<!-- Modal para imagen ampliada -->
+					<div id="imgModalAura" class="imgModalCustom">
+						<span id="closeImgModalAura">
+							<img src="images/close.svg" alt="Close">
+						</span>
+						<img id="imgModalSrcAura" src="" alt="">
+						<span id="prevImgAura" class="nav-btn">&#10094;</span>
+						<span id="nextImgAura" class="nav-btn">&#10095;</span>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form-3">
 		<div class="modal-form-head">
@@ -381,19 +405,7 @@
 					</div>
 				</div>
 
-				<div class="services-item wow fadeIn" id="py" data-wow-delay="0.3s">
-					<div class="services-thumb">
-						<img style="height: 225px;" src="images/py.jpeg">
-					</div>
-					<div class="services-body">
-						<h4 class="services-title">Evaluación de rentabilidad en proyectos de construcción en Paraguay</h4>
-						<div class="services-desc">
-							Un desarrollo inmobiliario en Paraguay se benefició de nuestra evaluación de rentabilidad.
-						</div>
-						<!--<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Order service</a>-->
-						<a href="#modal-form-3" data-effect="mfp-zoom-in" class="def-btn services-btn" style="width: 100%;text-align: center;padding: 10px 45px;">Más Info</a>
-					</div>
-				</div>
+				
 			</div>
 			
 		</div>

@@ -275,6 +275,11 @@ textarea::placeholder {
 .go-up img {
 	max-width: 50%;
 }
+
+.header-nav ul li a.active {
+		border-bottom: 3px solid #34434f;
+		color: #34434f;
+	}
 /* Header END */
 
 
@@ -769,8 +774,7 @@ textarea::placeholder {
 		gap: 10px; 
 	}
 
-	.form-right,
-	.form-map {
+	.form-right {
 		width: 100%; 
 	}
 
@@ -786,13 +790,18 @@ textarea::placeholder {
 		gap: 20px; 
 	}
 
-	.form-right,
-	.form-map {
+	.form-right{
 		width: 100%; 
 	}
 
 	.map-container iframe {
 		height: 400px; 
+	}
+}
+
+@media (max-width: 992px) {
+	.form-map {
+		display: none !important;
 	}
 }
 

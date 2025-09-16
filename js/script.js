@@ -49,6 +49,38 @@ document.addEventListener('DOMContentLoaded', () => {
 	    $('html, body').animate({ scrollTop: 0 }, 700);
 	    return false;
 	});
+
+	const links = document.querySelectorAll('.header-nav ul li a.anchor-link');
+	function setActive(link) {
+		links.forEach(l => l.classList.remove('active'));
+		link.classList.add('active');
+	}
+	links.forEach(link => {
+		link.addEventListener('click', function (e) {
+			// Si es un anchor interno, evitar navegación y marcar activo
+			if (link.getAttribute('href').startsWith('#')) {
+				setActive(link);
+			}
+		});
+	});
+	// Opcional: marcar activo según scroll
+	window.addEventListener('scroll', function () {
+		const sections = ['about', 'services', 'projects', 'contact'];
+		let found = false;
+		for (let sec of sections) {
+			const el = document.getElementById(sec);
+			if (el) {
+				const rect = el.getBoundingClientRect();
+				if (rect.top <= 80 && rect.bottom > 80) {
+					const navLink = document.getElementById('nav-' + sec);
+					if (navLink) setActive(navLink);
+					found = true;
+					break;
+				}
+			}
+		}
+		if (!found) setActive(document.getElementById('nav-inicio'));
+	});
 	// Header END
 
 	// Banner START

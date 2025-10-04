@@ -461,6 +461,9 @@ textarea::placeholder {
 	color: #999696;
 	min-height: 17.5vh;
 }
+.services-location{
+	margin: 0 0 5px 0;
+}
 .services-btn {
 	width: 100%;
 	text-align: center;
@@ -469,9 +472,9 @@ textarea::placeholder {
 
 .modal-form {
 	background-color: #fff;
-	max-width: 90%;
-	margin: 0 auto;
-	padding: 60px 80px;
+	max-width: 80%;
+	padding: 50px 85px;
+	margin: 30px auto;
 }
 .modal-form-head {
 	float: right;

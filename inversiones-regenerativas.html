@@ -65,15 +65,15 @@
 
 					<nav class="header-nav" style="margin-right: auto;">
 						<ul>
-							<li><a class="anchor-link" href="#" id="nav-inicio">Inicio</a></li>
-							<li><a class="anchor-link" href="#about" id="nav-about">Acerca De</a></li>
-							<li><a class="anchor-link" href="nosotros.html" id="nav-nosotros">Nosotros</a></li>
+							<li><a class="anchor-link" href="#">Inicio</a></li>
+							<li><a class="anchor-link" href="#about">Acerca De</a></li>
+							<li><a class="anchor-link" href="nosotros.html">Nosotros</a></li>
 							<li><a class="anchor-link" href="#services" id="nav-services">Servicios</a></li>
-							<li><a class="anchor-link" href="#projects" id="nav-projects">Proyectos</a></li>
+							<li><a class="anchor-link" href="#projects" >Proyectos</a></li>
 							<!--<li><a class="anchor-link" href="#s-gallery">Galería</a></li>
 							<li><a class="anchor-link" href="#s-team">Our team</a></li>
 							<li><a class="anchor-link" href="#s-testimonials">Testimonials</a></li>-->
-							<li><a class="anchor-link contact-btn" href="#contact" id="nav-contact">Contacto</a></li>
+							<li><a class="anchor-link contact-btn" href="#contact">Contacto</a></li>
 						</ul>
 					</nav>
 					
@@ -126,14 +126,34 @@
 				<div class="about-left">
 					<h2 class=" wow fadeInLeft" data-wow-delay="0.2s">Inversiones Regenerativas</h2>
 					<div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
-						Proyectos con propósito, inversiones con conciencia ambiental
-						Bio-tech
-						Regenerative 
-							-Tokenizacion de activos 
-						Estructuración para la tokenización de activos del mundo real (RWA)
-						Asesoramiento y gestión de activos digitales.
-						PSAV de comercializacion de tokens de oferta publica
-						PSAV as a Service
+						<ul class="custom-bullets">
+							<li>Proyectos con propósito, inversiones con conciencia ambiental</li>
+							<li>Bio-tech</li>
+							<li>Regenerative</li>
+							<li>Tokenización de activos</li>
+							<li>Estructuración para la tokenización de activos del mundo real (RWA)</li>
+							<li>Asesoramiento y gestión de activos digitales</li>
+							<li>PSAV de comercialización de tokens de oferta pública</li>
+							<li>PSAV as a Service</li>
+						</ul>
+						<style>
+							.custom-bullets {
+								list-style: none;
+								padding-left: 1.5em;
+							}
+							.custom-bullets li {
+								position: relative;
+								margin-bottom: 0.7em;
+							}
+							.custom-bullets li::before {
+								content: "•";
+								position: absolute;
+								left: -1.5em;
+								color: #34434F;
+								font-size: 1.2em;
+								line-height: 1;
+							}
+						</style>
 					</div>
 					<!--<a href="#productos" class="def-btn anchor-link wow fadeInLeft" data-wow-delay="0.4s">Order service</a>-->
 				</div>

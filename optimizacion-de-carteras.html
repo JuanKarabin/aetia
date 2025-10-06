@@ -65,15 +65,15 @@
 
 					<nav class="header-nav" style="margin-right: auto;">
 						<ul>
-							<li><a class="anchor-link" href="#" id="nav-inicio">Inicio</a></li>
-							<li><a class="anchor-link" href="#about" id="nav-about">Acerca De</a></li>
-							<li><a class="anchor-link" href="nosotros.html" id="nav-nosotros">Nosotros</a></li>
+							<li><a class="anchor-link" href="#">Inicio</a></li>
+							<li><a class="anchor-link" href="#about">Acerca De</a></li>
+							<li><a class="anchor-link" href="nosotros.html">Nosotros</a></li>
 							<li><a class="anchor-link" href="#services" id="nav-services">Servicios</a></li>
-							<li><a class="anchor-link" href="#projects" id="nav-projects">Proyectos</a></li>
+							<li><a class="anchor-link" href="#projects" >Proyectos</a></li>
 							<!--<li><a class="anchor-link" href="#s-gallery">Galería</a></li>
 							<li><a class="anchor-link" href="#s-team">Our team</a></li>
 							<li><a class="anchor-link" href="#s-testimonials">Testimonials</a></li>-->
-							<li><a class="anchor-link contact-btn" href="#contact" id="nav-contact">Contacto</a></li>
+							<li><a class="anchor-link contact-btn" href="#contact">Contacto</a></li>
 						</ul>
 					</nav>
 					
@@ -126,12 +126,32 @@
 				<div class="about-left">
 					<h2 class=" wow fadeInLeft" data-wow-delay="0.2s">Optimización de Carteras</h2>
 					<div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
-						- Evaluación de la cartera actual y estructura del cliente.
-						- Agentes de AI entrenados que sugieren las mejores opciones según el capital a invertir, el rendimiento estimado y las características del inversor.
-						- Detección de oportunidades y desarrollo del modelo óptimo de inversión.
-						- Proyecciones financieras con escenarios dinámicos (cashflow, ROI, cap rate)
-						- Simuladores interactivos para clientes
-						- Automatización de informes de rentabilidad y carteras
+						<ul class="custom-bullets">
+							<li>Evaluación de la cartera actual y estructura del cliente.</li>
+							<li>Agentes de AI entrenados que sugieren las mejores opciones según el capital a invertir, el rendimiento estimado y las características del inversor.</li>
+							<li>Detección de oportunidades y desarrollo del modelo óptimo de inversión.</li>
+							<li>Proyecciones financieras con escenarios dinámicos (cashflow, ROI, cap rate).</li>
+							<li>Simuladores interactivos para clientes.</li>
+							<li>Automatización de informes de rentabilidad y carteras.</li>
+						</ul>
+						<style>
+							.custom-bullets {
+								list-style: none;
+								padding-left: 1.5em;
+							}
+							.custom-bullets li {
+								position: relative;
+								margin-bottom: 0.7em;
+							}
+							.custom-bullets li::before {
+								content: "•";
+								position: absolute;
+								left: -1.5em;
+								color: #34434F;
+								font-size: 1.2em;
+								line-height: 1;
+							}
+						</style>
 					</div>
 					<!--<a href="#productos" class="def-btn anchor-link wow fadeInLeft" data-wow-delay="0.4s">Order service</a>-->
 				</div>

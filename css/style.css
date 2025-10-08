@@ -107,7 +107,18 @@ textarea::placeholder {
 .def-btn:hover {
 	background-color: #34434fcc;
 }
-
+.def-btn-redes-footer {
+	padding: 15px 45px;
+	display: inline-block;
+	transition: background-color 0.35s ease;
+	font-size: 20px;
+	color: #FFF3E8;
+	border: 1px solid #FFF3E8;
+}
+.def-btn-redes-footer:hover {
+	background-color: #34434fcc;
+	border: 1px solid #34434fcc;
+}
 .get-in-touch{
 	border: 2px solid #fff;
 	padding: 10px 30px;

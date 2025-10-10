@@ -1,252 +1,263 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-	new WOW().init();
+    new WOW().init();
 
-	// Header START
-	$('.hamburger').on('click', function() {
-		if($(this).hasClass('is-active')) {
-			$(this).removeClass('is-active');
-			$('.header-mobile-wrap').slideUp(500);
-		} else {
-			$(this).addClass('is-active');
-			$('.header-mobile-wrap').slideDown(500);
-		}
-	});
+    // ===================================================================
+    // HEADER & NAVEGACIÓN GENERAL
+    // ===================================================================
 
-	function scrollHeader() {
-		let headerTopHeight = $('.header-top').height();
-		if($(this).scrollTop() > headerTopHeight) {
-			$('.header-bottom').addClass('is-fixed');
-		} else {
-			$('.header-bottom').removeClass('is-fixed');
-		}
-	}
+    // Menú hamburguesa
+    $('.hamburger').on('click', function() {
+        $(this).toggleClass('is-active');
+        $('.header-mobile-wrap').slideToggle(500);
+    });
 
-	function showArrowUp() {
-		if($(this).scrollTop() > 1500) {
-			$('.go-up').addClass('is-active');
-		} else {
-			$('.go-up').removeClass('is-active');
-		}
-	}
+    // Header fijo y flecha para subir
+    const $window = $(window);
+    const $headerBottom = $('.header-bottom');
+    const $goUp = $('.go-up');
+    const headerTopHeight = $('.header-top').height();
 
-	$(window).on('scroll', function() {
-		scrollHeader();
-		showArrowUp();
-	});
-	scrollHeader();
-	showArrowUp();
+    function updateOnScroll() {
+        const scrollTop = $window.scrollTop();
+        // Header fijo
+        $headerBottom.toggleClass('is-fixed', scrollTop > headerTopHeight);
+        // Flecha "Go Up"
+        $goUp.toggleClass('is-active', scrollTop > 1500);
+    }
 
-	$('.anchor-link').on('click', function () {
-	    let href = $(this).attr('href');
-	    $('html, body').animate({ scrollTop: $(href).offset().top }, 700);
-		$('.header-mobile-wrap').slideUp(500);
-		$('.hamburger').removeClass('is-active');
-	    return false;
-	});
+    $window.on('scroll', updateOnScroll);
+    updateOnScroll(); // Ejecutar al cargar la página
 
-	$('.go-up').on('click', function () {
-	    $('html, body').animate({ scrollTop: 0 }, 700);
-	    return false;
-	});
+    // Smooth scroll para anclas
+    $('.anchor-link').on('click', function (e) {
+        e.preventDefault();
+        const href = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(href).offset().top }, 700);
 
-	const links = document.querySelectorAll('.header-nav ul li a.anchor-link');
-	function setActive(link) {
-		links.forEach(l => l.classList.remove('active'));
-		link.classList.add('active');
-	}
-	links.forEach(link => {
-		link.addEventListener('click', function (e) {
-			// Si es un anchor interno, evitar navegación y marcar activo
-			if (link.getAttribute('href').startsWith('#')) {
-				setActive(link);
-			}
-		});
-	});
-	// Opcional: marcar activo según scroll
-	window.addEventListener('scroll', function () {
-		const sections = ['about', 'services', 'projects', 'contact'];
-		let found = false;
-		for (let sec of sections) {
-			const el = document.getElementById(sec);
-			if (el) {
-				const rect = el.getBoundingClientRect();
-				if (rect.top <= 80 && rect.bottom > 80) {
-					const navLink = document.getElementById('nav-' + sec);
-					if (navLink) setActive(navLink);
-					found = true;
-					break;
-				}
-			}
-		}
-		if (!found) setActive(document.getElementById('nav-inicio'));
-	});
-	// Header END
+        // Cierra el menú móvil si está abierto
+        if ($('.hamburger').hasClass('is-active')) {
+            $('.hamburger').removeClass('is-active');
+            $('.header-mobile-wrap').slideUp(500);
+        }
+    });
 
-	// Banner START
-	const bannerSwiper = new Swiper('.banner-swiper', {
-		speed: 1000,
-		spaceBetween: 0,
-		autoHeight: true,
-		navigation: {
-			nextEl: '.banner-swiper .swiper-button-next',
-			prevEl: '.banner-swiper .swiper-button-prev',
-		},
-		pagination: {
-			el: '.banner-swiper .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-	});
-	// Banner END
+    // Botón "Go Up"
+    $goUp.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 700);
+    });
 
-	$('.modal-form-close').on('click', function() {
-    	$.magnificPopup.close();
-	});
+    // Lógica para marcar el link activo en la navegación (vanilla JS)
+    const navLinks = document.querySelectorAll('.header-nav ul li a.anchor-link');
+    const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').substring(1)));
 
-	
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const headerOffset = 80; // Altura del header fijo
+
+        sections.forEach(section => {
+            if (section) {
+                const sectionTop = section.offsetTop - headerOffset;
+                if (window.scrollY >= sectionTop) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // ===================================================================
+    // SWIPER & POPUPS (Librerías)
+    // ===================================================================
+
+    // Banner Swiper
+    const bannerSwiper = new Swiper('.banner-swiper', {
+        speed: 1000,
+        spaceBetween: 0,
+        autoHeight: true,
+        navigation: {
+            nextEl: '.banner-swiper .swiper-button-next',
+            prevEl: '.banner-swiper .swiper-button-prev',
+        },
+        pagination: {
+            el: '.banner-swiper .swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+    // Magnific Popup
+    $('.services-btn').magnificPopup({
+        type: 'inline',
+        fixedContentPos: true,
+        closeBtnInside: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.modal-form-close').on('click', () => $.magnificPopup.close());
 
 
-	/*START 7200 COLLINS*/
+    // ===================================================================
+    // LÓGICA DE GALERÍAS DE PROYECTOS (REFACTORIZADO)
+    // ===================================================================
 
-	// --- GALERÍA 7200 COLLINS ---
-	const gallery7200 = document.getElementById('gallery7200');
-	const showMore7200 = document.getElementById('showMore7200');
-	const showLess7200 = document.getElementById('showLess7200');
-	const total7200Images = 18; // <-- ¡IMPORTANTE! Cambia este número por la cantidad de imágenes que tengas.
-	const images7200ToShowInitially = 4; // Puedes mostrar menos al inicio si quieres
-	const cards7200 = [];
-	let current7200Index = -1;
+    /**
+     * @typedef {Object} ProjectConfig
+     * @property {string} id - Identificador único del proyecto (ej: '7200', 'standard').
+     * @property {string} name - Nombre para el texto ALT de las imágenes.
+     * @property {number} totalImages - Cantidad total de imágenes en la carpeta.
+     * @property {number} initialImages - Cuántas imágenes mostrar inicialmente.
+     * @property {string} imagePath - Ruta a la carpeta de imágenes del proyecto.
+     */
 
-	const imgModal7200 = document.getElementById('imgModal7200');
-	const modalImgSrc7200 = document.getElementById('imgModalSrc7200');
-	const closeImgBtn7200 = document.getElementById('closeImgModal7200');
+    /**
+     * @type {ProjectConfig[]}
+     */
+    const projectsConfig = [
+        {
+            id: '7200',
+            name: '7200 Collins',
+            totalImages: 18,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/7200'
+        },
+        {
+            id: 'Standard',
+            name: 'The Standard Brickell',
+            totalImages: 16,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/standard'
+        },
+        // --- PARA AGREGAR UN NUEVO PROYECTO, AÑADE UN OBJETO AQUÍ ---
+        // {
+        //   id: 'nuevoProyecto',
+        //   name: 'Nuevo Proyecto',
+        //   totalImages: 20,
+        //   initialImages: 4,
+        //   imagePath: 'proyectos/multimedia/nuevo'
+        // }
+    ];
 
-	// Crear cards 7200 Collins
-	for (let i = 1; i <= total7200Images; i++) {
-		const card = document.createElement('div');
-		card.className = 'modal-card';
-		card.style.display = i <= images7200ToShowInitially ? 'flex' : 'none';
+    /**
+     * Crea y gestiona una galería de proyecto completa a partir de una configuración.
+     * @param {ProjectConfig} config - El objeto de configuración del proyecto.
+     */
+    function createProjectGallery(config) {
+        // Obtener elementos del DOM basados en el ID del proyecto
+        const gallery = document.getElementById(`gallery${config.id}`);
+        
+        // Si el contenedor de la galería no existe en el HTML, no hacer nada.
+        if (!gallery) {
+            return;
+        }
 
-		const img = document.createElement('img');
-		// Asegúrate que la ruta de la carpeta sea correcta
-		img.src = `proyectos/multimedia/7200/${i}.png`; 
-		img.alt = `7200 Collins ${i}`;
-		img.style.width = '100%';
-		img.style.height = '100%';
-		img.style.objectFit = 'cover';
+        const showMore = document.getElementById(`showMore${config.id}`);
+        const showLess = document.getElementById(`showLess${config.id}`);
+        const imgModal = document.getElementById(`imgModal${config.id}`);
+        const modalImgSrc = document.getElementById(`imgModalSrc${config.id}`);
+        const closeImgBtn = document.getElementById(`closeImgModal${config.id}`);
+        const nextImgBtn = document.getElementById(`nextImg${config.id}`);
+        const prevImgBtn = document.getElementById(`prevImg${config.id}`);
 
-		const overlay = document.createElement('div');
-		overlay.className = 'modal-overlay';
+        const cards = [];
+        let currentIndex = -1;
 
-		const zoomIcon = document.createElement('span');
-		zoomIcon.className = 'modal-zoom-icon';
-		zoomIcon.innerHTML = '<img src="images/magnify.svg" alt="Zoom">';
+        // --- Crear y añadir las cards de imágenes ---
+        for (let i = 1; i <= config.totalImages; i++) {
+            const card = document.createElement('div');
+            card.className = 'modal-card';
+            card.style.display = i <= config.initialImages ? 'flex' : 'none';
 
-		card.appendChild(img);
-		card.appendChild(overlay);
-		card.appendChild(zoomIcon);
+            card.innerHTML = `
+                <img src="${config.imagePath}/${i}.png" alt="${config.name} ${i}" style="width:100%; height:100%; object-fit:cover;">
+                <div class="modal-overlay"></div>
+                <span class="modal-zoom-icon"><img src="images/magnify.svg" alt="Zoom"></span>
+            `;
 
-		gallery7200.appendChild(card);
-		cards7200.push(card);
+            gallery.appendChild(card);
+            cards.push(card);
 
-		img.addEventListener('click', function() {
-			current7200Index = i - 1;
-			open7200Modal(current7200Index);
-		});
-	}
+            card.querySelector('img').addEventListener('click', () => {
+                currentIndex = i - 1;
+                openModal(currentIndex);
+            });
+        }
 
-	// Ocultar botón "Mostrar Más" si no es necesario
-	if (total7200Images <= images7200ToShowInitially) {
-		showMore7200.style.display = 'none';
-	}
+        // --- Lógica del Modal (Lightbox) ---
+        function openModal(index) {
+            const card = cards[index];
+            const img = card.querySelector('img');
+            if (img) {
+                modalImgSrc.src = img.src;
+                imgModal.style.display = 'flex';
+            }
+        }
+        
+        function closeModal() {
+            imgModal.style.display = 'none';
+            modalImgSrc.src = '';
+        }
 
-	// Abrir modal
-	function open7200Modal(index) {
-		const card = cards7200[index];
-		const img = card.querySelector('img');
-		if (img) {
-			modalImgSrc7200.src = img.src;
-			imgModal7200.style.display = 'flex';
-		}
-	}
+        function showNext() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            openModal(currentIndex);
+        }
 
-	// Navegación
-	function showNext7200() {
-		current7200Index = (current7200Index + 1) % cards7200.length;
-		open7200Modal(current7200Index);
-	}
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            openModal(currentIndex);
+        }
 
-	function showPrev7200() {
-		current7200Index = (current7200Index - 1 + cards7200.length) % cards7200.length;
-		open7200Modal(current7200Index);
-	}
+        // Event Listeners para el modal
+        nextImgBtn.addEventListener('click', showNext);
+        prevImgBtn.addEventListener('click', showPrev);
+        closeImgBtn.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
+        imgModal.addEventListener('click', (e) => { if (e.target === imgModal) closeModal(); });
 
-	document.getElementById('nextImg7200').addEventListener('click', showNext7200);
-	document.getElementById('prevImg7200').addEventListener('click', showPrev7200);
+        document.addEventListener('keydown', (e) => {
+            if (imgModal.style.display === 'flex') {
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'Escape') closeModal();
+            }
+        });
 
-	// Teclado
-	document.addEventListener('keydown', function(e) {
-		if (imgModal7200.style.display === 'flex') {
-			if (e.key === 'ArrowRight') showNext7200();
-			if (e.key === 'ArrowLeft') showPrev7200();
-			if (e.key === 'Escape') {
-				e.stopPropagation();
-				e.preventDefault();
-				imgModal7200.style.display = 'none';
-				modalImgSrc7200.src = '';
-			}
-		}
-	});
+        // --- Lógica de botones "Mostrar Más" / "Mostrar Menos" ---
+        if (config.totalImages <= config.initialImages) {
+            if (showMore) showMore.style.display = 'none';
+        }
 
-	// Cerrar con X
-	closeImgBtn7200.addEventListener('click', function(e) {
-		e.stopPropagation();
-		imgModal7200.style.display = 'none';
-		modalImgSrc7200.src = '';
-	});
+        if (showMore) {
+            showMore.addEventListener('click', () => {
+                cards.forEach(card => card.style.display = 'flex');
+                showMore.style.display = 'none';
+                if (showLess) showLess.style.display = 'inline-block';
+            });
+        }
 
-	// Cerrar con click en overlay
-	imgModal7200.addEventListener('click', function(e) {
-		if (e.target === imgModal7200) {
-			imgModal7200.style.display = 'none';
-			modalImgSrc7200.src = '';
-		}
-	});
+        if (showLess) {
+            showLess.addEventListener('click', () => {
+                cards.forEach((card, index) => {
+                    if (index >= config.initialImages) {
+                        card.style.display = 'none';
+                    }
+                });
+                showLess.style.display = 'none';
+                if (showMore) showMore.style.display = 'inline-block';
+                gallery.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+    }
 
-	// LÓGICA DE LOS BOTONES "MOSTRAR MÁS" Y "MOSTRAR MENOS"
-
-	// --- Evento para "Mostrar Más" ---
-	if (showMore7200) {
-		showMore7200.addEventListener('click', function() {
-			// Muestra todas las imágenes
-			cards7200.forEach(card => card.style.display = 'flex');
-			
-			// Oculta "Mostrar Más" y muestra "Mostrar Menos"
-			showMore7200.style.display = 'none';
-			if(showLess7200) showLess7200.style.display = 'inline-block';
-		});
-	}
-
-	// --- Evento para "Mostrar Menos" ---
-	if (showLess7200) {
-		showLess7200.addEventListener('click', function() {
-			// Oculta las imágenes que exceden el límite inicial
-			cards7200.forEach((card, index) => {
-				if (index >= images7200ToShowInitially) {
-					card.style.display = 'none';
-				}
-			});
-			
-			// Oculta "Mostrar Menos" y muestra "Mostrar Más"
-			showLess7200.style.display = 'none';
-			if(showMore7200) showMore7200.style.display = 'inline-block';
-
-			// Opcional: Hace scroll suave hacia el inicio de la galería para mejor UX
-			gallery7200.scrollIntoView({ behavior: 'smooth', block: 'center' });
-		});
-	}
-
-	/*END 7200 COLLINS*/
+    // --- INICIALIZAR TODAS LAS GALERÍAS DEFINIDAS EN LA CONFIGURACIÓN ---
+    projectsConfig.forEach(createProjectGallery);
 
 });

@@ -1482,7 +1482,7 @@ textarea::placeholder {
 	z-index: 10001;
 }
 
-#closeImgModalAura {
+#closeImgModalStandard {
 	position: absolute;
 	top: 32px; right: 48px;
 	width: 35px; height: 35px;
@@ -1495,7 +1495,7 @@ textarea::placeholder {
 	height: 100%;
 }
 
-#closeImgModalAura img {
+#closeImgModalStandard img {
 	width: 100%;
 	height: 100%;
 }
@@ -1548,14 +1548,14 @@ textarea::placeholder {
 }
 
 /* La imagen ampliada dentro del modal */
-#imgModalSrc7200, #imgModalSrcAura, #imgModalSrc { /* Aplica a todos tus modales de imagen */
+#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrc { /* Aplica a todos tus modales de imagen */
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
 }
 
 /* El botón de cerrar (la 'X') */
-#closeImgModal7200, #closeImgModalAura, #closeImgModal {
+#closeImgModal7200, #closeImgModalStandard, #closeImgModal {
   position: absolute;
   top: 20px;
   right: 35px;
@@ -1566,7 +1566,7 @@ textarea::placeholder {
   transition: opacity 0.3s;
 }
 
-#closeImgModal7200:hover, #closeImgModalAura:hover, #closeImgModal:hover {
+#closeImgModal7200:hover, #imgModalSrcStandard:hover, #closeImgModal:hover {
   opacity: 1;
 }
 
@@ -1590,13 +1590,13 @@ textarea::placeholder {
 }
 
 .imgModalCustom #prevImg7200, 
-.imgModalCustom #prevImgAura, 
+.imgModalCustom #prevImgStandard, 
 .imgModalCustom #prevImg {
   left: 15px;
 }
 
 .imgModalCustom #nextImg7200,
-.imgModalCustom #nextImgAura,
+.imgModalCustom #nextImgStandard,
 .imgModalCustom #nextImg {
   right: 15px;
 }

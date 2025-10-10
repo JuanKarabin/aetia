@@ -201,6 +201,183 @@
 		</div>
 	</div>
 
+	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form-standard">
+		<div class="modal-form-head">
+			<div class="modal-form-close">
+				<img src="images/close.svg" alt="Close">
+			</div>
+		</div>
+
+		<div class="modal-form-body">
+			<div class="modal-flex">
+				<div class="modal-text">
+					<div class="modal-form-title">
+						The Standard Brickell
+					</div>
+					<p>
+						Brickell, Miami Beach
+					</p>
+
+					<div class="modal-form-title">
+						<span class="highlight">Imágenes</span>
+					</div>
+
+					<!-- Tarjetas de imágenes cuadradas centradas -->
+				
+					<div class="modal-gallery" id="galleryStandard" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;"></div>
+					
+
+					<div style="margin-top: 24px; text-align: center;">
+						<button id="showMoreStandard" class="def-btn" style="margin-top: 0.5rem; border: none;">Mostrar Más</button>
+
+						<button id="showLessStandard" class="def-btn" style="margin-top: 0.5rem; border: none; display: none;">Mostrar Menos</button>
+					</div>
+
+
+
+					<!-- Modal para imagen ampliada -->
+					<div id="imgModalStandard" class="imgModalCustom"> 
+						<span id="closeImgModalStandard">
+							<img src="images/close.svg" alt="Close">
+						</span>
+						<img id="imgModalSrcStandard" src="" alt="">
+						
+						<span id="prevImgStandard" class="nav-btn">❮</span>
+						<span id="nextImgStandard" class="nav-btn">❯</span>
+					</div>
+
+					<div class="project-reasons">
+						<h4 style="color: #34434f; margin-bottom: 1rem;">¿Por qué elegir este proyecto?</h4>
+						<ul style="list-style: none; padding: 0; margin: 0;">
+							<li style="margin-bottom: 1rem;">
+								Calidad y diseños asegurados, respaldados por una marca hotelera internacional de primer nivel.
+							</li>
+							<li style="margin-bottom: 1rem;">
+								Ubicación estratégica en Brickell y servicios de conserjería de primer nivel.
+							</li>
+							<li style="margin-bottom: 1rem;">
+								Acceso VIP a todas las experiencias Standard y descuentos en la cadena hotelera alrededor del mundo.
+							</li>
+							<li style="margin-bottom: 1rem;">
+								Proyecto para quienes buscan capitalización, status y lujo redefinido. Comprar en The Standard es acceder a una comunidad de networking global y exclusiva.
+							</li>
+						</ul>
+
+						<div class="project-location" style="margin-top: 2rem;">
+							<h4 style="color: #34434f; margin-bottom: 1rem;">Ubicación:</h4>
+							<div style="display: flex; justify-content: center;">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar"
+									width="800"
+									height="250"
+									style="border:0;"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade">
+								</iframe>
+							</div>
+						</div>
+
+						
+					</div>
+
+				
+					<div class="project-reasons" style="margin-top: 2rem;">
+						<h4 style="color: #34434f; margin-bottom: 1rem;">Información general & precios</h4>
+						<ul style="padding-left: 1.5em; margin: 0; list-style: disc;">
+							<li><strong>Arquitecto:</strong> Arquitectonica </li>
+							<li><strong>Interiorismo:</strong> Goodrich en colaboración con el equipo de diseño de The Standard </li>
+							<li><strong>Desarrolladores:</strong> Newgard Development Group & Two Roads</li>
+							<li><strong>Plan de pagos:</strong>
+								<ul style="padding-left: 1em; margin-top: 0.5em;">
+									<li>20 % al contrato</li>
+									<li>5 % a los 90 días del contrato</li>
+									<li>10 % a los 120 días del contrato</li>
+									<li>65 % al cierre (closing)</li>
+								</ul>
+							</li>
+							<li><strong>Precios de arranque aproximados:</strong>
+								<ul style="padding-left: 1em; margin-top: 0.5em;">
+									<li>Studios desde US$ 600.000</li>
+									<li>1 dormitorio desde US$ 720.000</li>
+									<li>2 dormitorios: precios superiores (depende del plano y ubicación dentro del edificio)</li>
+								</ul>
+							</li>
+							<li><strong>Rentabilidad estimada:</strong> 7% perfil conservador.</li>
+						</ul>
+					</div>
+
+					<div class="modal-btn-row" style="margin: 2rem 0; text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1rem;">
+						<a href="proyectos/brochures/The_Standard_Brickell_Miami.pdf" download class="def-btn" style="padding: 10px 32px; font-size: 1.2rem; min-width: 140px;">Descargar Brochure</a>
+					</div>
+
+					<!-- Responsive styles for modal-form-standard -->
+					<style>
+					@media (max-width: 600px) {
+						#modal-form-standard .modal-text {
+							padding: 18px 14px 18px 14px !important;
+						}
+						#modal-form-standard .modal-form-title {
+							font-size: 1.15rem !important;
+							line-height: 1.2 !important;
+						}
+						#modal-form-standard h4 {
+							font-size: 1rem !important;
+						}
+						#modal-form-standard ul {
+							font-size: 0.98rem !important;
+						}
+						#modal-form-standard .modal-img-row {
+							flex-direction: column !important;
+							gap: 16px !important;
+							align-items: center !important;
+							width: 100% !important;
+						}
+						#modal-form-standard .modal-img {
+							width: 90vw !important;
+							max-width: 280px !important;
+							min-width: 180px !important;
+							height: 180px !important;
+							object-fit: cover !important;
+							box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+							display: block;
+						}
+						#modal-form-standard .project-location iframe {
+							width: 90vw !important;
+							max-width: 280px !important;
+							height: 160px !important;
+						}
+						#modal-form-standard .modal-btn-row {
+							flex-direction: column !important;
+							gap: 1rem !important;
+						}
+						#modal-form-standard .def-btn {
+							font-size: 0.95rem !important;
+							padding: 10px 18px !important;
+							min-width: 120px !important;
+						}
+					}
+					/* Desktop styles for modal-img-row */
+					#modal-form-standard .modal-img-row {
+						display: flex;
+						justify-content: center;
+						gap: 18px;
+						margin-top: 2rem;
+					}
+					#modal-form-standard .modal-img {
+						width: 220px;
+						height: 220px;
+						object-fit: cover;
+						box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+						border-radius: 0;
+					}
+					</style>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<!-- End Modal Forms -->
 
@@ -479,18 +656,17 @@
 
       <div class="services-item wow fadeIn" data-wow-delay="0.1s" style="flex: 1 1 400px; max-width: 500px; display: flex; flex-direction: column;">
         <div class="services-thumb">
-          <img style="height: 225px;" src="proyectos/multimedia/7200/1.png">
+          <img style="height: 225px;" src="proyectos/multimedia/standard/1.png">
         </div>
         <div class="projects-body" style="flex: 1 1 auto; display: flex; flex-direction: column;">
-          <h4 class="services-title">7200 Collins</h4>
-          <p class="services-location">Collins Ave, Miami Beach</p>
+          <h4 class="services-title">The Standard Brickell</h4>
+          <p class="services-location">Brickell, Miami Beach</p>
           <div class="services-desc" style="margin-bottom: auto;">
-            El nuevo ícono frente al mar.
-			Un desarrollo boutique en Miami Beach que une diseño de vanguardia, amenities de lujo y ubicación privilegiada.
-			Residencias desde studios hasta 2 dormitorios con den, con acceso al exclusivo Beach Club privado.
-			Cada detalle de 7200 Collins fue creado para reflejar el estilo de vida elegante y vibrante de Miami. Apto Airbnb.
+            La reconocida cadena hotelera de lujo llega al corazón de Brickell, 
+			Residencias con diseño contemporáneo, rooftop panorámico, spa, gimnasio y amenities exclusivas como charters náuticos.
+			Un proyecto que redefine el estilo de vida urbano más vibrante de Miami.
           </div>
-          <a href="#modal-form-7200" data-effect="mfp-zoom-in" class="def-btn services-btn" style="width: 100%; text-align: center; padding: 10px 45px; margin-top: 1rem;">Más Info</a>
+          <a href="#modal-form-standard" data-effect="mfp-zoom-in" class="def-btn services-btn" style="width: 100%; text-align: center; padding: 10px 45px; margin-top: 1rem;">Más Info</a>
         </div>
       </div>
 
@@ -704,6 +880,10 @@
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 	<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>-->
 

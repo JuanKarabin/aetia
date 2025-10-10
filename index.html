@@ -30,88 +30,52 @@
 				<img src="images/close.svg" alt="Close">
 			</div>
 		</div>
-
 		<div class="modal-form-body">
 			<div class="modal-flex">
 				<div class="modal-text">
-					<div class="modal-form-title">
-						7200 Collins: New construction / 2027
-					</div>
-					<p>
-						7200 Collins Ave, Miami Beach, FL 33141, EE. UU
-					</p>
+					<div class="modal-form-title">7200 Collins: New construction / 2027</div>
+					<p>7200 Collins Ave, Miami Beach, FL 33141, EE. UU</p>
+					<div class="modal-form-title"><span class="highlight">Imágenes</span></div>
 
-					<div class="modal-form-title">
-						<span class="highlight">Imágenes</span>
-					</div>
+					<div class="modal-gallery" id="gallery7200"></div>
 
-					<!-- Tarjetas de imágenes cuadradas centradas -->
-				
-					<div class="modal-gallery" id="gallery7200" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;"></div>
-					
-
-					<div style="margin-top: 24px; text-align: center;">
-						<button id="showMore7200" class="def-btn" style="margin-top: 0.5rem; border: none;">Mostrar Más</button>
-						
-						<button id="showLess7200" class="def-btn" style="margin-top: 0.5rem; border: none; display: none;">Mostrar Menos</button>
+					<div class="gallery-controls">
+						<button id="showMore7200" class="def-btn">Mostrar Más</button>
+						<button id="showLess7200" class="def-btn" style="display: none;">Mostrar Menos</button>
 					</div>
 
-
-
-					<!-- Modal para imagen ampliada -->
-					<div id="imgModal7200" class="imgModalCustom"> 
-						<span id="closeImgModal7200">
-							<img src="images/close.svg" alt="Close">
-						</span>
+					<div id="imgModal7200" class="imgModalCustom">
+						<span id="closeImgModal7200"><img src="images/close.svg" alt="Close"></span>
 						<img id="imgModalSrc7200" src="" alt="">
-						
 						<span id="prevImg7200" class="nav-btn">❮</span>
 						<span id="nextImg7200" class="nav-btn">❯</span>
 					</div>
 
-					<div class="project-reasons">
-						<h4 style="color: #34434f; margin-bottom: 1rem;">¿Por qué elegir este proyecto?</h4>
-						<ul style="list-style: none; padding: 0; margin: 0;">
-							<li style="margin-bottom: 1rem;">
-								<strong>Ubicación estratégica:</strong> 
-								<strong>Miami Beach</strong> es sinónimo de <strong>turismo todo el año</strong>. Ubicado <strong>frente a la playa</strong> y cercano a todos los <strong>puntos de interés</strong> que la ciudad tiene para ofrecer. 
-							</li>
-							<li style="margin-bottom: 1rem;">
-								Opción ideal para <strong>inversores</strong> que buscan tener su lugar en <strong>Miami Beach</strong> y <strong>alquilarlo</strong> cuando no están. <strong>Servicios categoría hotel 5 estrellas</strong>, <strong>unidades amobladas</strong> listas para su uso y puesta en mercado. <strong>Amenities exclusivos</strong> para propietarios.	
-							</li>
-							<li>
-								<strong>Zona con gran potencial de revalorización</strong>, toda el área de <strong>North Miami Beach</strong> está siendo modernizada volviéndose el nuevo punto de elección para el turismo.
-							</li>
+					<div class="project-section">
+						<h4 class="project-subtitle">¿Por qué elegir este proyecto?</h4>
+						<ul class="project-list no-bullets">
+							<li><strong>Ubicación estratégica:</strong> <strong>Miami Beach</strong> es sinónimo de <strong>turismo todo el año</strong>. Ubicado <strong>frente a la playa</strong> y cercano a todos los <strong>puntos de interés</strong> que la ciudad tiene para ofrecer.</li>
+							<li>Opción ideal para <strong>inversores</strong> que buscan tener su lugar en <strong>Miami Beach</strong> y <strong>alquilarlo</strong> cuando no están. <strong>Servicios categoría hotel 5 estrellas</strong>, <strong>unidades amobladas</strong> listas para su uso y puesta en mercado. <strong>Amenities exclusivos</strong> para propietarios.</li>
+							<li><strong>Zona con gran potencial de revalorización</strong>, toda el área de <strong>North Miami Beach</strong> está siendo modernizada volviéndose el nuevo punto de elección para el turismo.</li>
 						</ul>
-
-						<div class="project-location" style="margin-top: 2rem;">
-							<h4 style="color: #34434f; margin-bottom: 1rem;">Ubicación:</h4>
-							<div style="display: flex; justify-content: center;">
-								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar"
-									width="800"
-									height="250"
-									style="border:0;"
-									allowfullscreen=""
-									loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade">
-								</iframe>
-							</div>
-						</div>
-
-						
 					</div>
 
-				
-					<div class="project-reasons" style="margin-top: 2rem;">
-						<h4 style="color: #34434f; margin-bottom: 1rem;">Información general, precios y forma de pago</h4>
-						<ul style="padding-left: 1.5em; margin: 0; list-style: disc;">
+					<div class="project-section project-location">
+						<h4 class="project-subtitle">Ubicación:</h4>
+						<div class="map-container">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+
+					<div class="project-section">
+						<h4 class="project-subtitle">Información general, precios y forma de pago</h4>
+						<ul class="project-list">
 							<li><strong>Arquitecto:</strong> Revuelta</li>
 							<li><strong>Desarrollador:</strong> Northlink Capital</li>
 							<li><strong>Estado:</strong> preconstrucción / 2027</li>
 							<li><strong>Precios de partida:</strong> US$ 550.000</li>
 							<li><strong>Rangos estimados de precios por tipo de unidad:</strong>
-								<ul style="padding-left: 1em; margin-top: 0.5em;">
+								<ul class="project-list nested">
 									<li>Estudios: desde los $550k</li>
 									<li>1 dormitorio: desde los $800k</li>
 									<li>1 dormitorio + den: desde los $900k</li>
@@ -119,7 +83,7 @@
 								</ul>
 							</li>
 							<li><strong>Plan de pagos estimado:</strong>
-								<ul style="padding-left: 1em; margin-top: 0.5em;">
+								<ul class="project-list nested">
 									<li>20 % al contrato</li>
 									<li>10 % al inicio de obra (Q4 2025)</li>
 									<li>10 % al “top off” (cuando la estructura esté lista) (Q4 2026)</li>
@@ -129,73 +93,10 @@
 							<li><strong>Rentabilidad estimada:</strong> 8%, perfil conservador. Gran potencial de valorización del área.</li>
 						</ul>
 					</div>
-
-					<div class="modal-btn-row" style="margin: 2rem 0; text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1rem;">
-						<a href="proyectos/brochures/7200_brochure.pdf" download class="def-btn" style="padding: 10px 32px; font-size: 1.2rem; min-width: 140px;">Descargar Brochure</a>
+					
+					<div class="brochure-link-row">
+						<a href="proyectos/brochures/7200_brochure.pdf" download class="def-btn def-btn-large">Descargar Brochure</a>
 					</div>
-
-					<!-- Responsive styles for modal-form-7200 -->
-					<style>
-					@media (max-width: 600px) {
-						#modal-form-7200 .modal-text {
-							padding: 18px 14px 18px 14px !important;
-						}
-						#modal-form-7200 .modal-form-title {
-							font-size: 1.15rem !important;
-							line-height: 1.2 !important;
-						}
-						#modal-form-7200 h4 {
-							font-size: 1rem !important;
-						}
-						#modal-form-7200 ul {
-							font-size: 0.98rem !important;
-						}
-						#modal-form-7200 .modal-img-row {
-							flex-direction: column !important;
-							gap: 16px !important;
-							align-items: center !important;
-							width: 100% !important;
-						}
-						#modal-form-7200 .modal-img {
-							width: 90vw !important;
-							max-width: 280px !important;
-							min-width: 180px !important;
-							height: 180px !important;
-							object-fit: cover !important;
-							box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-							display: block;
-						}
-						#modal-form-7200 .project-location iframe {
-							width: 90vw !important;
-							max-width: 280px !important;
-							height: 160px !important;
-						}
-						#modal-form-7200 .modal-btn-row {
-							flex-direction: column !important;
-							gap: 1rem !important;
-						}
-						#modal-form-7200 .def-btn {
-							font-size: 0.95rem !important;
-							padding: 10px 18px !important;
-							min-width: 120px !important;
-						}
-					}
-					/* Desktop styles for modal-img-row */
-					#modal-form-7200 .modal-img-row {
-						display: flex;
-						justify-content: center;
-						gap: 18px;
-						margin-top: 2rem;
-					}
-					#modal-form-7200 .modal-img {
-						width: 220px;
-						height: 220px;
-						object-fit: cover;
-						box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-						border-radius: 0;
-					}
-					</style>
-
 				</div>
 			</div>
 		</div>
@@ -207,89 +108,52 @@
 				<img src="images/close.svg" alt="Close">
 			</div>
 		</div>
-
 		<div class="modal-form-body">
 			<div class="modal-flex">
 				<div class="modal-text">
-					<div class="modal-form-title">
-						The Standard Brickell
-					</div>
-					<p>
-						Brickell, Miami Beach
-					</p>
+					<div class="modal-form-title">The Standard Brickell</div>
+					<p>Brickell, Miami Beach</p>
+					<div class="modal-form-title"><span class="highlight">Imágenes</span></div>
 
-					<div class="modal-form-title">
-						<span class="highlight">Imágenes</span>
-					</div>
+					<div class="modal-gallery" id="galleryStandard"></div>
 
-					<!-- Tarjetas de imágenes cuadradas centradas -->
-				
-					<div class="modal-gallery" id="galleryStandard" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;"></div>
-					
-
-					<div style="margin-top: 24px; text-align: center;">
-						<button id="showMoreStandard" class="def-btn" style="margin-top: 0.5rem; border: none;">Mostrar Más</button>
-
-						<button id="showLessStandard" class="def-btn" style="margin-top: 0.5rem; border: none; display: none;">Mostrar Menos</button>
+					<div class="gallery-controls">
+						<button id="showMoreStandard" class="def-btn">Mostrar Más</button>
+						<button id="showLessStandard" class="def-btn" style="display: none;">Mostrar Menos</button>
 					</div>
 
-
-
-					<!-- Modal para imagen ampliada -->
-					<div id="imgModalStandard" class="imgModalCustom"> 
-						<span id="closeImgModalStandard">
-							<img src="images/close.svg" alt="Close">
-						</span>
+					<div id="imgModalStandard" class="imgModalCustom">
+						<span id="closeImgModalStandard"><img src="images/close.svg" alt="Close"></span>
 						<img id="imgModalSrcStandard" src="" alt="">
-						
 						<span id="prevImgStandard" class="nav-btn">❮</span>
 						<span id="nextImgStandard" class="nav-btn">❯</span>
 					</div>
 
-					<div class="project-reasons">
-						<h4 style="color: #34434f; margin-bottom: 1rem;">¿Por qué elegir este proyecto?</h4>
-						<ul style="list-style: none; padding: 0; margin: 0;">
-							<li style="margin-bottom: 1rem;">
-								Calidad y diseños asegurados, respaldados por una marca hotelera internacional de primer nivel.
-							</li>
-							<li style="margin-bottom: 1rem;">
-								Ubicación estratégica en Brickell y servicios de conserjería de primer nivel.
-							</li>
-							<li style="margin-bottom: 1rem;">
-								Acceso VIP a todas las experiencias Standard y descuentos en la cadena hotelera alrededor del mundo.
-							</li>
-							<li style="margin-bottom: 1rem;">
-								Proyecto para quienes buscan capitalización, status y lujo redefinido. Comprar en The Standard es acceder a una comunidad de networking global y exclusiva.
-							</li>
+					<div class="project-section">
+						<h4 class="project-subtitle">¿Por qué elegir este proyecto?</h4>
+						<ul class="project-list no-bullets">
+							<li>Calidad y diseños asegurados, respaldados por una marca hotelera internacional de primer nivel.</li>
+							<li>Ubicación estratégica en Brickell y servicios de conserjería de primer nivel.</li>
+							<li>Acceso VIP a todas las experiencias Standard y descuentos en la cadena hotelera alrededor del mundo.</li>
+							<li>Proyecto para quienes buscan capitalización, status y lujo redefinido. Comprar en The Standard es acceder a una comunidad de networking global y exclusiva.</li>
 						</ul>
-
-						<div class="project-location" style="margin-top: 2rem;">
-							<h4 style="color: #34434f; margin-bottom: 1rem;">Ubicación:</h4>
-							<div style="display: flex; justify-content: center;">
-								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar"
-									width="800"
-									height="250"
-									style="border:0;"
-									allowfullscreen=""
-									loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade">
-								</iframe>
-							</div>
-						</div>
-
-						
 					</div>
 
-				
-					<div class="project-reasons" style="margin-top: 2rem;">
-						<h4 style="color: #34434f; margin-bottom: 1rem;">Información general & precios</h4>
-						<ul style="padding-left: 1.5em; margin: 0; list-style: disc;">
-							<li><strong>Arquitecto:</strong> Arquitectonica </li>
-							<li><strong>Interiorismo:</strong> Goodrich en colaboración con el equipo de diseño de The Standard </li>
+					<div class="project-section project-location">
+						<h4 class="project-subtitle">Ubicación:</h4>
+						<div class="map-container">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+
+					<div class="project-section">
+						<h4 class="project-subtitle">Información general & precios</h4>
+						<ul class="project-list">
+							<li><strong>Arquitecto:</strong> Arquitectonica</li>
+							<li><strong>Interiorismo:</strong> Goodrich en colaboración con el equipo de diseño de The Standard</li>
 							<li><strong>Desarrolladores:</strong> Newgard Development Group & Two Roads</li>
 							<li><strong>Plan de pagos:</strong>
-								<ul style="padding-left: 1em; margin-top: 0.5em;">
+								<ul class="project-list nested">
 									<li>20 % al contrato</li>
 									<li>5 % a los 90 días del contrato</li>
 									<li>10 % a los 120 días del contrato</li>
@@ -297,7 +161,7 @@
 								</ul>
 							</li>
 							<li><strong>Precios de arranque aproximados:</strong>
-								<ul style="padding-left: 1em; margin-top: 0.5em;">
+								<ul class="project-list nested">
 									<li>Studios desde US$ 600.000</li>
 									<li>1 dormitorio desde US$ 720.000</li>
 									<li>2 dormitorios: precios superiores (depende del plano y ubicación dentro del edificio)</li>
@@ -307,77 +171,91 @@
 						</ul>
 					</div>
 
-					<div class="modal-btn-row" style="margin: 2rem 0; text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1rem;">
-						<a href="proyectos/brochures/The_Standard_Brickell_Miami.pdf" download class="def-btn" style="padding: 10px 32px; font-size: 1.2rem; min-width: 140px;">Descargar Brochure</a>
+					<div class="brochure-link-row">
+						<a href="proyectos/brochures/The_Standard_Brickell_Miami.pdf" download class="def-btn def-btn-large">Descargar Brochure</a>
 					</div>
-
-					<!-- Responsive styles for modal-form-standard -->
-					<style>
-					@media (max-width: 600px) {
-						#modal-form-standard .modal-text {
-							padding: 18px 14px 18px 14px !important;
-						}
-						#modal-form-standard .modal-form-title {
-							font-size: 1.15rem !important;
-							line-height: 1.2 !important;
-						}
-						#modal-form-standard h4 {
-							font-size: 1rem !important;
-						}
-						#modal-form-standard ul {
-							font-size: 0.98rem !important;
-						}
-						#modal-form-standard .modal-img-row {
-							flex-direction: column !important;
-							gap: 16px !important;
-							align-items: center !important;
-							width: 100% !important;
-						}
-						#modal-form-standard .modal-img {
-							width: 90vw !important;
-							max-width: 280px !important;
-							min-width: 180px !important;
-							height: 180px !important;
-							object-fit: cover !important;
-							box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-							display: block;
-						}
-						#modal-form-standard .project-location iframe {
-							width: 90vw !important;
-							max-width: 280px !important;
-							height: 160px !important;
-						}
-						#modal-form-standard .modal-btn-row {
-							flex-direction: column !important;
-							gap: 1rem !important;
-						}
-						#modal-form-standard .def-btn {
-							font-size: 0.95rem !important;
-							padding: 10px 18px !important;
-							min-width: 120px !important;
-						}
-					}
-					/* Desktop styles for modal-img-row */
-					#modal-form-standard .modal-img-row {
-						display: flex;
-						justify-content: center;
-						gap: 18px;
-						margin-top: 2rem;
-					}
-					#modal-form-standard .modal-img {
-						width: 220px;
-						height: 220px;
-						object-fit: cover;
-						box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-						border-radius: 0;
-					}
-					</style>
-
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form-william">
+		<div class="modal-form-head">
+			<div class="modal-form-close">
+				<img src="images/close.svg" alt="Close">
+			</div>
+		</div>
+		<div class="modal-form-body">
+			<div class="modal-flex">
+				<div class="modal-text">
+					<div class="modal-form-title">The William Residences</div>
+					<p>The William Residences - North Miami</p>
+					<div class="modal-form-title"><span class="highlight">Imágenes</span></div>
+
+					<div class="modal-gallery" id="galleryWilliam"></div>
+
+					<div class="gallery-controls">
+						<button id="showMoreWilliam" class="def-btn">Mostrar Más</button>
+						<button id="showLessWilliam" class="def-btn" style="display: none;">Mostrar Menos</button>
+					</div>
+
+					<div id="imgModalWilliam" class="imgModalCustom">
+						<span id="closeImgModalWilliam"><img src="images/close.svg" alt="Close"></span>
+						<img id="imgModalSrcWilliam" src="" alt="">
+						<span id="prevImgWilliam" class="nav-btn">❮</span>
+						<span id="nextImgWilliam" class="nav-btn">❯</span>
+					</div>
+
+					<div class="project-section">
+						<h4 class="project-subtitle">¿Por qué elegir este proyecto?</h4>
+						<ul class="project-list no-bullets">
+							<li>Plan de pagos flexible pensado para inversores extranjeros.</li>
+							<li>Política de alquiler atractiva, ideal para quienes buscan generar ingresos desde el exterior.</li>
+							<li>Ubicación estratégica en North Miami Beach, con rápido acceso a Sunny Isles, Bal Harbour, las playas y autopistas principales.</li>
+							<li>A minutos de Aventura Mall, el centro comercial más famoso del sur de la Florida, con las mejores marcas internacionales, gastronomía y entretenimiento.</li>
+						</ul>
+					</div>
+
+					<div class="project-section project-location">
+						<h4 class="project-subtitle">Ubicación:</h4>
+						<div class="map-container">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.093099287467!2d-80.1239346849787!3d25.85755598358309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3e7e2e6b6e1%3A0x7e7e7e7e7e7e7e7e!2s7200%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033141%2C%20EE.%20UU!5e0!3m2!1ses!2sar!4v1718030000000!5m2!1ses!2sar" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+
+					<div class="project-section">
+						<h4 class="project-subtitle">Información general & precios</h4>
+						<ul class="project-list">
+							<li><strong>Arquitectos:</strong> Carlos Ott & Behar Font</li>
+							<li><strong>Desarrolladores:</strong> Blue Road & Ilia Development Group</li>
+							<li><strong>Tipos de unidades / precios de partida:</strong>
+								<ul class="project-list nested">
+									<li>Estudios desde US$ 380.900</li>
+									<li>1 dormitorio desde US$ 412.900</li>
+									<li>2 dormitorios desde US$ 598.900</li>
+									<li>3 dormitorios desde US$ 990.900</li>
+								</ul>
+							</li>
+							<li><strong>Plan de pagos estimado:</strong>
+								<ul class="project-list nested">
+									<li>1. 10 % al reservar</li>
+									<li>2. 10 % al firmar contrato</li>
+									<li>3. 10 % al inicio de obra (groundbreaking)</li>
+									<li>4. 10 % al “top off” (cuando la estructura esté lista)</li>
+									<li>5. 60 % al cierre</li>
+								</ul>
+							</li>
+							<li><strong>Rentabilidad estimada:</strong> perfil conservador 8%.</li>
+						</ul>
+					</div>
+
+					<div class="brochure-link-row">
+						<a href="proyectos/brochures/The_William_Factsheet_Branded.pdf" download class="def-btn def-btn-large">Descargar Brochure</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- End Modal Forms -->
 
@@ -672,7 +550,22 @@
 
     <!-- Fila 2 -->
     <div class="services-row" style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 32px;">
-      
+      <div class="services-item wow fadeIn" data-wow-delay="0.1s" style="flex: 1 1 400px; max-width: 500px; display: flex; flex-direction: column;">
+        <div class="services-thumb">
+          <img style="height: 225px;" src="proyectos/multimedia/william/1.png">
+        </div>
+        <div class="projects-body" style="flex: 1 1 auto; display: flex; flex-direction: column;">
+          <h4 class="services-title">The William Residences</h4>
+          <p class="services-location">The William Residences - North Miami</p>
+          <div class="services-desc" style="margin-bottom: auto;">
+            Modernidad e inversión a minutos de Aventura Mall y Sunny Isles.
+			Torre de 26 pisos con 374 residencias diseñadas por Carlos Ott & Behar Font, que combinan lujo contemporáneo y alta rentabilidad.
+			Desde US$ 380.900, entrega 2029.
+			Alquileres de 30 días permitidos. Ideal para inversores globales.
+          </div>
+          <a href="#modal-form-william" data-effect="mfp-zoom-in" class="def-btn services-btn" style="width: 100%; text-align: center; padding: 10px 45px; margin-top: 1rem;">Más Info</a>
+        </div>
+      </div>
     </div>
 
     <!-- Fila 3 -->

@@ -675,13 +675,6 @@ textarea::placeholder {
 	width: 54%; 
 }
 
-.map-container {
-	background-color: #F6F6F6;
-	padding: 15px;
-	box-shadow: 0px -1px 8px 4px rgba(88, 83, 83, 0.12);
-	border-radius: 5px;
-}
-
 /*Nosotros Start*/
 .mision-vision {
 	color: #34434f;
@@ -1164,9 +1157,6 @@ textarea::placeholder {
 	.hamburger span:last-child {
 		bottom: 0;
 	}
-	.hamburger.is-active {
-		
-	}
 	.hamburger.is-active span:first-child {
 		top: 50%;
 		transform: translateY(-50%) rotate(45deg);
@@ -1548,14 +1538,14 @@ textarea::placeholder {
 }
 
 /* La imagen ampliada dentro del modal */
-#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrc { /* Aplica a todos tus modales de imagen */
+#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrcWilliam, #imgModalSrc { /* Aplica a todos tus modales de imagen */
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
 }
 
 /* El botón de cerrar (la 'X') */
-#closeImgModal7200, #closeImgModalStandard, #closeImgModal {
+#closeImgModal7200, #closeImgModalStandard, #closeImgModalWilliam, #closeImgModal {
   position: absolute;
   top: 20px;
   right: 35px;
@@ -1566,7 +1556,7 @@ textarea::placeholder {
   transition: opacity 0.3s;
 }
 
-#closeImgModal7200:hover, #imgModalSrcStandard:hover, #closeImgModal:hover {
+#closeImgModal7200:hover, #closeImgModalStandard:hover, #closeImgModalWilliam:hover, #closeImgModal:hover {
   opacity: 1;
 }
 
@@ -1591,12 +1581,124 @@ textarea::placeholder {
 
 .imgModalCustom #prevImg7200, 
 .imgModalCustom #prevImgStandard, 
+.imgModalCustom #prevImgWilliam,
 .imgModalCustom #prevImg {
   left: 15px;
 }
 
 .imgModalCustom #nextImg7200,
 .imgModalCustom #nextImgStandard,
+.imgModalCustom #nextImgWilliam,
 .imgModalCustom #nextImg {
   right: 15px;
+}
+
+/* =================================================================== */
+/* ESTILOS UNIFICADOS PARA TODOS LOS MODALS DE PROYECTOS
+/* =================================================================== */
+
+/* Contenedor de la galería de imágenes dentro del modal */
+.modal-form .modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+/* Contenedor para botones 'Mostrar Más/Menos' */
+.modal-form .gallery-controls {
+    margin-top: 24px;
+    text-align: center;
+}
+.modal-form .gallery-controls .def-btn {
+    margin-top: 0.5rem;
+    border: none;
+}
+
+/* Secciones de contenido del proyecto */
+.modal-form .project-section {
+    margin-top: 2rem;
+}
+.modal-form .project-subtitle {
+    color: #34434f;
+    margin-bottom: 1rem;
+}
+.modal-form .project-list {
+    margin: 0;
+    padding-left: 1.5em; /* Padding para viñetas */
+    list-style: disc;
+}
+.modal-form .project-list.no-bullets {
+    list-style: none;
+    padding: 0;
+}
+.modal-form .project-list li {
+    margin-bottom: 1rem;
+}
+.modal-form .project-list li:last-child {
+    margin-bottom: 0;
+}
+.modal-form .project-list.nested {
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+/* Contenedor del mapa */
+.modal-form .map-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Fila de botones de descarga */
+.modal-form .brochure-link-row {
+    margin: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.modal-form .def-btn-large {
+    padding: 10px 32px;
+    font-size: 1.2rem;
+    min-width: 140px;
+}
+
+/* =================================================================== */
+/* ESTILOS RESPONSIVOS UNIFICADOS (MENOS DE 600px)
+/* =================================================================== */
+@media (max-width: 600px) {
+    /* Ajustes generales de texto y padding en el modal */
+    .modal-form .modal-text {
+        padding: 18px 14px !important;
+    }
+    .modal-form .modal-form-title {
+        font-size: 1.15rem !important;
+        line-height: 1.2 !important;
+    }
+    .modal-form .project-subtitle { /* Se aplica a todos los h4 */
+        font-size: 1rem !important;
+    }
+    .modal-form .project-list { /* Se aplica a todos los ul */
+        font-size: 0.98rem !important;
+    }
+
+    /* Mapa responsivo */
+    .modal-form .project-location iframe {
+        width: 90vw !important;
+        max-width: 280px !important;
+        height: 160px !important;
+    }
+    
+    /* Botones responsivos */
+    .modal-form .brochure-link-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    .modal-form .def-btn-large {
+        font-size: 0.95rem !important;
+        padding: 10px 18px !important;
+        min-width: 120px !important;
+    }
 }

@@ -136,6 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
             initialImages: 4,
             imagePath: 'proyectos/multimedia/standard'
         },
+		{
+            id: 'William',
+            name: 'The William Residences',
+            totalImages: 11,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/william'
+        }
         // --- PARA AGREGAR UN NUEVO PROYECTO, AÑADE UN OBJETO AQUÍ ---
         // {
         //   id: 'nuevoProyecto',

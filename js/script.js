@@ -142,6 +142,20 @@ document.addEventListener('DOMContentLoaded', () => {
             totalImages: 11,
             initialImages: 4,
             imagePath: 'proyectos/multimedia/william'
+        },
+		{
+            id: 'Cassia',
+            name: 'Cassia',
+            totalImages: 10,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/cassia'
+        },
+		{
+            id: 'Seven',
+            name: 'Seven',
+            totalImages: 16,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/seven'
         }
         // --- PARA AGREGAR UN NUEVO PROYECTO, AÑADE UN OBJETO AQUÍ ---
         // {

@@ -1538,14 +1538,14 @@ textarea::placeholder {
 }
 
 /* La imagen ampliada dentro del modal */
-#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrcWilliam, #imgModalSrc { /* Aplica a todos tus modales de imagen */
+#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrcWilliam, #imgModalSrcCassia, #imgModalSrcSeven { /* Aplica a todos tus modales de imagen */
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
 }
 
 /* El botón de cerrar (la 'X') */
-#closeImgModal7200, #closeImgModalStandard, #closeImgModalWilliam, #closeImgModal {
+#closeImgModal7200, #closeImgModalStandard, #closeImgModalWilliam, #closeImgModalCassia, #closeImgModalSeven {
   position: absolute;
   top: 20px;
   right: 35px;
@@ -1556,7 +1556,7 @@ textarea::placeholder {
   transition: opacity 0.3s;
 }
 
-#closeImgModal7200:hover, #closeImgModalStandard:hover, #closeImgModalWilliam:hover, #closeImgModal:hover {
+#closeImgModal7200:hover, #closeImgModalStandard:hover, #closeImgModalWilliam:hover, #closeImgModalCassia:hover, #closeImgModalSeven:hover {
   opacity: 1;
 }
 
@@ -1582,14 +1582,16 @@ textarea::placeholder {
 .imgModalCustom #prevImg7200, 
 .imgModalCustom #prevImgStandard, 
 .imgModalCustom #prevImgWilliam,
-.imgModalCustom #prevImg {
+.imgModalCustom #prevImgCassia,
+.imgModalCustom #prevImgSeven {
   left: 15px;
 }
 
 .imgModalCustom #nextImg7200,
 .imgModalCustom #nextImgStandard,
 .imgModalCustom #nextImgWilliam,
-.imgModalCustom #nextImg {
+.imgModalCustom #nextImgCassia,
+.imgModalCustom #nextImgSeven {
   right: 15px;
 }
 

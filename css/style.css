@@ -471,7 +471,7 @@ textarea::placeholder {
 	margin-bottom: 15px;
 	color: #999696;
 	min-height: 17.5vh;
-	font-size: 19px;
+	font-size: 18.5px;
 }
 .services-location{
 	margin: 0 0 5px 0;
@@ -1538,14 +1538,14 @@ textarea::placeholder {
 }
 
 /* La imagen ampliada dentro del modal */
-#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrcWilliam, #imgModalSrcCassia, #imgModalSrcSeven { /* Aplica a todos tus modales de imagen */
+#imgModalSrc7200, #imgModalSrcStandard, #imgModalSrcWilliam, #imgModalSrcCassia, #imgModalSrcSeven, #imgModalSrcAlbor, #imgModalSrcAura { /* Aplica a todos tus modales de imagen */
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
 }
 
 /* El botón de cerrar (la 'X') */
-#closeImgModal7200, #closeImgModalStandard, #closeImgModalWilliam, #closeImgModalCassia, #closeImgModalSeven {
+#closeImgModal7200, #closeImgModalStandard, #closeImgModalWilliam, #closeImgModalCassia, #closeImgModalSeven, #closeImgModalAlbor, #closeImgModalAura {
   position: absolute;
   top: 20px;
   right: 35px;
@@ -1556,7 +1556,7 @@ textarea::placeholder {
   transition: opacity 0.3s;
 }
 
-#closeImgModal7200:hover, #closeImgModalStandard:hover, #closeImgModalWilliam:hover, #closeImgModalCassia:hover, #closeImgModalSeven:hover {
+#closeImgModal7200:hover, #closeImgModalStandard:hover, #closeImgModalWilliam:hover, #closeImgModalCassia:hover, #closeImgModalSeven:hover, #closeImgModalAlbor:hover, #closeImgModalAura:hover {
   opacity: 1;
 }
 
@@ -1583,7 +1583,9 @@ textarea::placeholder {
 .imgModalCustom #prevImgStandard, 
 .imgModalCustom #prevImgWilliam,
 .imgModalCustom #prevImgCassia,
-.imgModalCustom #prevImgSeven {
+.imgModalCustom #prevImgSeven,
+.imgModalCustom #prevImgAlbor,
+.imgModalCustom #prevImgAura {
   left: 15px;
 }
 
@@ -1591,7 +1593,9 @@ textarea::placeholder {
 .imgModalCustom #nextImgStandard,
 .imgModalCustom #nextImgWilliam,
 .imgModalCustom #nextImgCassia,
-.imgModalCustom #nextImgSeven {
+.imgModalCustom #nextImgSeven,
+.imgModalCustom #nextImgAlbor,	
+.imgModalCustom #nextImgAura {
   right: 15px;
 }
 
@@ -1601,11 +1605,25 @@ textarea::placeholder {
 
 /* Contenedor de la galería de imágenes dentro del modal */
 .modal-form .modal-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 24px;
+	margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+	.modal-form .modal-gallery .modal-card {
+		width: 210px;
+    	height: 135px;
+	}
+	.modal-form .modal-gallery {
+		gap: 16px;
+		width: min-content;
+	}
+	.modal-form .project-section {
+		width: 80%;
+	}
 }
 
 /* Contenedor para botones 'Mostrar Más/Menos' */

@@ -156,6 +156,20 @@ document.addEventListener('DOMContentLoaded', () => {
             totalImages: 16,
             initialImages: 4,
             imagePath: 'proyectos/multimedia/seven'
+        },
+        {
+            id: 'Albor',
+            name: 'Albor',
+            totalImages: 29,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/albor'
+        },
+        {
+            id: 'Aura',
+            name: 'Aura',
+            totalImages: 13,
+            initialImages: 4,
+            imagePath: 'proyectos/multimedia/aura'
         }
         // --- PARA AGREGAR UN NUEVO PROYECTO, AÑADE UN OBJETO AQUÍ ---
         // {

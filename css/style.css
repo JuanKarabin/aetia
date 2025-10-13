@@ -441,7 +441,6 @@ textarea::placeholder {
 .services-row {
 	display: flex;
 	column-gap: 35px;
-	margin-bottom: 30px;
 }
 .services-item {
 	box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.15);
@@ -471,7 +470,7 @@ textarea::placeholder {
 	margin-bottom: 15px;
 	color: #999696;
 	min-height: 17.5vh;
-	font-size: 18.5px;
+	font-size: 19px;
 }
 .services-location{
 	margin: 0 0 5px 0;
@@ -676,9 +675,6 @@ textarea::placeholder {
 }
 
 /*Nosotros Start*/
-.mision-vision {
-	color: #34434f;
-}
 
 .nosotros {
 	padding: 30px 0;
@@ -715,6 +711,8 @@ textarea::placeholder {
 	display: flex;
 	align-items: center;
 	gap: 10px; /* espacio entre icono y texto */
+	color: #34434f;
+	margin-top: 2rem;
 }
 
 .mision-vision .icon-title {

@@ -1016,13 +1016,7 @@ textarea::placeholder {
 		margin-bottom: 20px;
 	}
 	.about-right {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 505px;
-	}
-	.about-right img{
-		width: 90% !important;
-		height: auto;
+		display: none;
 	}
 	/* About 992 END */
 

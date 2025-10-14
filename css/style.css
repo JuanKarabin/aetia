@@ -1345,7 +1345,8 @@ textarea::placeholder {
 
 @media screen and (max-width: 480px) {
 	.modal-form {
-		padding: 20px 30px 50px 30px;
+		max-width: 90%;
+  		padding: 20px;
 	}
 	.modal-form-title {
 		font-size: 28px;
@@ -1615,16 +1616,12 @@ textarea::placeholder {
 
 @media (max-width: 480px) {
 	.modal-form .modal-gallery .modal-card {
-		width: 210px;
-    	height: 135px;
+    	height: 150px;
 	}
 	.modal-form .modal-gallery {
 		gap: 16px;
-		width: min-content;
 	}
-	.modal-form .project-section {
-		width: 80%;
-	}
+	
 }
 
 /* Contenedor para botones 'Mostrar Más/Menos' */

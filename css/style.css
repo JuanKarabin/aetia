@@ -480,6 +480,9 @@ textarea::placeholder {
 	text-align: center;
 	padding: 12px 45px;
 }
+.services-btn:hover {
+	cursor: pointer;
+}
 
 .modal-form {
 	background-color: #fff;

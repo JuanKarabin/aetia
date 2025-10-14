@@ -815,6 +815,12 @@ textarea::placeholder {
 	}
 }
 
+@media (max-width: 768px) {
+	.footer-info-icon {
+		margin-right: 0px !important;
+	}
+}
+
 .icono-linkedin,
 .icono-whatsapp,
 .icono-email {
@@ -879,7 +885,6 @@ textarea::placeholder {
 }
 .footer-info-item:nth-last-child(n+2) {
 	margin-bottom: 22px;
-	margin-right: 15px;
 }
 .footer-info-icon {
 	margin-right: 14px;

@@ -112,7 +112,6 @@ textarea::placeholder {
 	display: inline-block;
 	transition: background-color 0.35s ease;
 	font-size: 20px;
-	color: #FFF3E8;
 	border: 1px solid #FFF3E8;
 }
 .def-btn-redes-footer:hover {
@@ -857,7 +856,7 @@ textarea::placeholder {
 .footer-right {
 	display: flex;
 	justify-content: space-between;
-	padding: 35px 0 60px 30px;
+	padding: 35px 25px;
 }
 .footer-desc {
 	color: #D2D2D2;

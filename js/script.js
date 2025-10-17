@@ -181,6 +181,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     ];
 
+    // --- CÓDIGO PARA HACER DINÁMICO 'initialImages' ---
+
+    function adjustInitialImages() {
+        // Obtenemos el ancho actual de la ventana
+        const screenWidth = window.innerWidth;
+
+        // Definimos el valor por defecto
+        let newInitialValue = 4;
+
+        // Verificamos si el ancho está en el rango deseado (1154px a 1495px)
+        if (screenWidth >= 1154 && screenWidth <= 1495) {
+            newInitialValue = 6;
+        }
+
+        // Recorremos el arreglo de proyectos y actualizamos el valor
+        projectsConfig.forEach(project => {
+            project.initialImages = newInitialValue;
+        });
+
+        // Opcional: para que veas en la consola cómo cambia el valor
+        console.log(`Ancho: ${screenWidth}px, initialImages establecido en: ${projectsConfig[0].initialImages}`);
+    }
+
+    // 1. Ejecutamos la función cuando la página carga por primera vez
+    adjustInitialImages();
+
+    // 2. Agregamos un "oyente" para que la función se ejecute cada vez que se redimensiona la ventana
+    window.addEventListener('resize', adjustInitialImages);
+
     /**
      * Crea y gestiona una galería de proyecto completa a partir de una configuración.
      * @param {ProjectConfig} config - El objeto de configuración del proyecto.
